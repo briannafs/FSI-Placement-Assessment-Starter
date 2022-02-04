@@ -1,27 +1,66 @@
-// HINT: You can delete this console.log after you no longer need it!
-console.log('JavaScript code has loaded!')
-// First, tell us your name
-let yourName = "Jane Doe" // HINT: Replace this with your own name!
 
-// We'll use these variables to track the counts of each cookie type
+// First, tell us your name
+let yourName = "Brianna Sengchan" // HINT: Replace this with your own name!
+
+
+// Variables
 let gb = 0 // Gingerbread
 let cc = 0 // Chocolate Chip
 let sugar = 0 // Sugar Sprinkle
 
-// selecting the element with an id of credit
+
+// Selected Elements
 const credit = document.querySelector('#credit')
-// selecting the element with an id of add-gb
+
 const gbPlusBtn = document.querySelector('#add-gb')
+const gbMinusBtn = document.querySelector('#minus-gb')
+const gingerCounter = document.querySelector("#qty-gb")
+
+const ccPlusBtn = document.querySelector('#add-cc')
+const ccMinusBtn = document.querySelector('#minus-cc')
+const cookieCounter = document.querySelector('#qty-cc')
+
+const sugarPlusBtn = document.querySelector('#add-sugar')
+const sugarMinusBtn = document.querySelector('#minus-sugar')
+const sugarCounter = document.querySelector('#qty-sugar')
+
+const totalCount = document.querySelector('#qty-total')
+
 
 // Code to update name display
 credit.textContent = `Created by ${yourName}`
 
-// Event listener for clicks on the "+" button for Gingerbread cookies
+
+// Event listeners
 gbPlusBtn.addEventListener('click', function() {
-// HINT: You can delete this console.log after you no longer need it!
-console.log('Gingerbread + button was clicked!')
+    console.log("clicked");
+    gb++;
+    gingerCounter.textContent = gb;
+});
+gbMinusBtn.addEventListener('click', function() {
+    console.log("clicked");
+    gb--;
+    gingerCounter.textContent = gb;
+});
 
-// TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
-})
+ccPlusBtn.addEventListener('click', function() {
+    console.log("clicked");
+    cc++;
+    cookieCounter.textContent = cc;
+});
+ccMinusBtn.addEventListener('click', function() {
+    console.log("clicked");
+    cc--;
+    cookieCounter.textContent = cc;
+});
 
-// TODO: Hook up event listeners for the rest of the buttons
+sugarPlusBtn.addEventListener('click', function() {
+    console.log("clicked");
+    sugar++;
+    sugarCounter.textContent = sugar;
+}); 
+sugarMinusBtn.addEventListener('click', function() {
+    console.log("clicked");
+    sugar--;
+    sugarCounter.textContent = sugar;
+});
